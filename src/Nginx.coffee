@@ -11,8 +11,8 @@ module.exports = class Nginx
 
   removeDefault: (cb) ->
     sh """
-      rm /etc/nginx/sites-enabled/default 2>/dev/null
-      rm /etc/nginx/sites-available/default 2>/dev/null
+      rm -f /etc/nginx/sites-enabled/default
+      rm -f /etc/nginx/sites-available/default
     """, cb
 
   write: (cb) ->
